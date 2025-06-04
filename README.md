@@ -33,3 +33,9 @@ LyricsPlayer es una aplicación web que permite buscar canciones, escuchar previ
    ```bash
    git clone https://github.com/tuusuario/LyricsPlayer.git
    cd LyricsPlayer
+
+Abre el archivo index.html en tu navegador.
+
+Busca tu canción favorita, haz clic en "Ver letra" y explora su significado.
+
+⚠️ Recuerda configurar correctamente tu clave de API para OpenRouter.ai en hugginface.js.
