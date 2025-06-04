@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lyrics Player - Reproductor de Letras Musicales</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body data-theme="light">
+
+<header class="app-header">
+    <div class="header-container">
+      <h1 class="logo">🎵 LyricsPlayer</h1>
+      
+      <div class="search-theme-wrapper">
+        <form id="searchForm" class="search-container">
+          <div class="search-input-group">
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="search-input" 
+              placeholder="Buscar canciones, artistas..."
+              autocomplete="off"
+            />
+            <button type="submit" class="search-button" aria-label="Buscar">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+  
+        <button id="themeToggle" class="theme-button" aria-label="Cambiar tema">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun hidden"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+
+      <section id="resultsSection" class="results-section">
+        <h2 class="section-title">Resultados</h2>
+        <div id="suggestionsContainer" class="results-grid"></div>
+      </section>
+
+      
+      <section id="playerSection" class="player-section hidden">
+        <div class="track-info">
+          <img id="albumCover" class="album-cover" src="" alt="Portada del álbum" />
+          <div class="track-meta">
+            <span id="currentTrack" class="track-title">Canción</span>
+            <span id="currentArtist" class="track-artist">Artista</span>
+            <span id="releaseDate" class="track-date">Fecha de lanzamiento</span>
+            <button id="generateMeaningBtn" class="meaning-btn hidden">Generar significado</button>
+            <button id="showLyricsBtn" class="meaning-btn hidden">Ver letra</button>
+        </div>
+
+          <div class="custom-player">
+            <button id="playButton" class="play-btn" aria-label="play">
+              <i class="fas fa-play"></i>
+            </button>
+            
+            <div class="progress-container" id="progressContainer">
+              <div class="progress-bar" id="progressBar"></div>
+            </div>
+            
+            <div class="progress-time">
+              <span id="currentTime">0:00</span>
+              <span id="duration">0:30</span>
+            </div>
+          </div>
+
+        </div>      
+        <div id="lyricsContainer" class="lyrics-container">
+          <div class="lyrics-scroller">
+            <pre id="lyricsText" class="lyrics-text">Letra aparecerá aquí</pre>
+          </div>
+        </div>
+
+      </section>
+
+      <div id="mensaje" class="mensaje"></div>
+    </div>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
